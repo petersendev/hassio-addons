@@ -26,7 +26,7 @@
     "share:rw",
     "ssl"
   ],
-  "webui": "http://[HOST]:[PORT:8989]",
+  "webui": "http://[HOST]:[PORT:8096]",
   "boot": "auto",
   "options": {
     "PUID": 1001,
