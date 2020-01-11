@@ -129,7 +129,7 @@ jobs:
       addon: 'jellyfin'
       arch: '--all'
 
-- job: 'transmission-openvpn'
+- job: 'transmission_openvpn'
   condition: and(eq(variables['Build.SourceBranchName'], 'master'), succeeded('Hadolint'), succeeded('JQ'))
   dependsOn:
   - 'Hadolint'
