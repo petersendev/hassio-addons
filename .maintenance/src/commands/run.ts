@@ -47,7 +47,8 @@ export async function run(manager: Manager, opts: any)
 
     if (!opts.nobuild)
     {
-        await build(manager, { addon, nocheck: true });
+        console.log("building image(s)");
+        await build(manager, { addon, nocheck: true, arch: "--amd64" });
     }
 
     let args =

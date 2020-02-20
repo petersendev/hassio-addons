@@ -5,10 +5,15 @@ import { Manager } from "../manager";
 export async function build(manager: Manager, opts: any)
 {
     const addon = opts.addon;
+    const config = await manager.getAddonConfig(addon);
 
     if (!opts.arch)
     {
-        opts.arch = ["--amd64"];
+        opts.arch = config.arch.map(x => `--${x}`);
+    }
+    else if(!Array.isArray(opts.arch))
+    {
+        opts.arch = [opts.arch];
     }
 
     let args = [
@@ -35,6 +40,6 @@ export async function build(manager: Manager, opts: any)
             "--docker-hub-check"
         ]);
     }
-
+    
     const result = spawn.sync("docker", args, { stdio: 'inherit' });
 }
