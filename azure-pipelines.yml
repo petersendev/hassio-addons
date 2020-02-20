@@ -184,6 +184,6 @@ jobs:
   - template: .azure-pipelines/addon-template.yml
     parameters:
       addon: 'transmission-magnet-redirect'
-      arch: '--armhf --amd64 --aarch64'
+      arch: '--amd64'
       ${{ if ne(variables['Build.SourceBranchName'], 'master') }}:
         additionalArgs: --test
