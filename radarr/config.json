@@ -1,6 +1,6 @@
 {
   "name": "radarr",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "slug": "radarr",
   "maintenance": {
     "github_release": "https://github.com/linuxserver/docker-radarr",
