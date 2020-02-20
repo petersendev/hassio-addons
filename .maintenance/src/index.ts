@@ -143,7 +143,13 @@ async function run(opts: { patch: boolean })
                 }
                 else
                 {
-                    
+                    console.log(chalk.yellowBright(`updating base images in build.json from ${image}:{arch}-${chalk.magenta(coloredTag)} to ${image}:{arch}-${chalk.magenta(newColoredTag)}`));
+                    build_json.build_from_template.version = releaseInfo.tag_name;
+                    for (let arch in build_json.build_from)
+                    {
+                        build_json.build_from[arch] = build_json.build_from[arch].replace(tag, releaseInfo.tag_name);
+                    }
+                    await fs.writeJSONAsync(buildJsonPath, build_json, { spaces: 4 });
                 }
 
                 const newVersion = semver.inc(version, minorUpgrade ? "minor" : "patch");
