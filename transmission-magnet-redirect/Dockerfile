@@ -2,14 +2,14 @@ ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM $BUILD_FROM
 
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 ARG BUILD_ARCH=amd64
 RUN apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        curl \
-        jq \
-        tzdata \
+        jq=1.5+dfsg-2+b1 \
     \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; fi \
