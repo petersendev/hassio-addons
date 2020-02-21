@@ -24,6 +24,8 @@ export async function build(manager: Manager, opts: any)
         "//var/run/docker.sock:/var/run/docker.sock:rw",
         "-v",
         `${path.resolve(manager.rootDir)}:/data:ro`,
+        "--name",
+        "ha-builder",
         "homeassistant/amd64-builder:latest",
         "--addon",
         ...opts.arch,

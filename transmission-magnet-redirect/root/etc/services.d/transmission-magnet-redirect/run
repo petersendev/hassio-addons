@@ -2,9 +2,5 @@
 
 bashio::log.info 'Starting transmission-magnet-redirect...'
 
-for k in $(bashio::jq "${__BASHIO_ADDON_CONFIG}" 'keys | .[]'); do
-    export $k=$(bashio::config $k)
-done
-
 cd /app
 exec dotnet TransmissionMagnetRedirect.dll
