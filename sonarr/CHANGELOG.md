@@ -1,6 +1,7 @@
 ## 0.3.0
 
  - not a legacy addon anymore
+ - Update base image to linuxserver/sonarr:2.0.0.5338-ls50
 
 ## 0.2.2
 

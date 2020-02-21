@@ -1,6 +1,7 @@
 ## 0.4.0
 
  - not a legacy addon anymore
+ - Update jackett to 0.13.144 (linuxserver/jackett:v0.13.144-ls55)
 
 ## 0.3.0
 

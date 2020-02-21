@@ -1,6 +1,7 @@
 ## 0.3.0
 
  - not a legacy addon anymore
+ - Update base image to linuxserver/jellyfin:v10.4.3-ls36
  
  ## 0.2.0
 
