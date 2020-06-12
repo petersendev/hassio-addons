@@ -1,10 +1,11 @@
 {
   "name": "hyperion",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "slug": "hyperion",
   "legacy": false,
   "maintenance": {
     "github_release": "https://github.com/hyperion-project/hyperion.ng",
+    "include_prerelease": true,
     "version_regex": "(\\d+\\.\\d+\\.?\\d*-?\\w*.?\\d*)"
   },
   "description": "Ambient Ligting implementation",

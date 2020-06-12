@@ -1,8 +1,4 @@
 {
-    "build_from_template": {
-        "image": "linuxserver/jackett",
-        "version": "v0.16.324-ls64"
-    },
     "build_from": {
         "armhf": "hassioaddons/debian-base-armhf:3.2.0",
         "aarch64": "hassioaddons/debian-base-aarch64:3.2.0",
