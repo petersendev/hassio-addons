@@ -2,30 +2,21 @@ ARG BUILD_FROM=hassioaddons/debian-base
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-#https://github.com/hyperion-project/hyperion.ng/releases/download/2.0.0-alpha.6/Hyperion-2.0.0-alpha.6-Linux-x86_64.tar.gz
-#https://github.com/hyperion-project/hyperion.ng/releases/download/2.0.0-alpha.6/Hyperion-2.0.0-alpha.6-Linux-armv7l.tar.gz
-#https://github.com/hyperion-project/hyperion.ng/releases/download/2.0.0-alpha.6/Hyperion-2.0.0-alpha.6-Linux-aarch64.tar.gz
-
-#https://github.com/hyperion-project/hyperion.ng/releases/download/2.0.0-alpha.6/Hyperion-2.0.0-alpha.6-Linux-x86_64.deb
-#https://github.com/hyperion-project/hyperion.ng/releases/download/2.0.0-alpha.6/Hyperion-2.0.0-alpha.6-Linux-armv7l.deb
-#https://github.com/hyperion-project/hyperion.ng/releases/download/2.0.0-alpha.6/Hyperion-2.0.0-alpha.6-Linux-aarch64.deb
-
 ARG BUILD_ARCH=amd64
 ARG RELEASE
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
-		libpython3.5 \
-		libjpeg62-turbo \
-		libavahi-compat-libdnssd1 \
-		libdbus-1-3 \
-		libqt5sql5 \
-		libqt5serialport5 \
-		libqt5network5 \
-		libqt5widgets5 \
-		libqt5gui5 \
-		libqt5core5a \
-		libusb-1.0 \
+		libjpeg62-turbo=1:1.5.2-2+b1 \
+		libavahi-compat-libdnssd1=0.7-4+b1 \
+		libdbus-1-3=1.12.16-1 \
+		libqt5sql5=5.11.3+dfsg1-1+deb10u3 \
+		libqt5serialport5=5.11.3-2 \
+		libqt5network5=5.11.3+dfsg1-1+deb10u3 \
+		libqt5widgets5=5.11.3+dfsg1-1+deb10u3 \
+		libqt5gui5=5.11.3+dfsg1-1+deb10u3 \
+		libqt5core5a=5.11.3+dfsg1-1+deb10u3 \
+		libusb-1.0=2:1.0.22-2 \
 	&& if [[ "${BUILD_ARCH}" = "amd64" ]]; then ARCH="Linux-x86_64"; fi \
 	&& if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="Linux-aarch64"; fi \
     && curl -fsSL https://github.com/hyperion-project/hyperion.ng/releases/download/${RELEASE}/Hyperion-${RELEASE}-${ARCH}.deb > /tmp/Hyperion-${RELEASE}-${ARCH}.deb \
