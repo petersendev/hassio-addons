@@ -37,13 +37,8 @@
   "webui": "http://[HOST]:[PORT:8090]",
   "boot": "auto",
   "options": {
-    "PUID": 1001,
-    "PGID": 1001
   },
   "schema": {
-    "PUID": "int",
-    "PGID": "int",
-    "TZ": "str?"
   },
   "image": "petersendev/hassio-hyperion-{arch}"
 }
