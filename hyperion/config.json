@@ -16,10 +16,18 @@
     "amd64"
   ],
   "ports": {
-    "8090/tcp": 8090
+    "8090/tcp": 8090,
+    "19333/tcp": 19333,
+    "19400/tcp": 19400,
+    "19444/tcp": 19444,
+    "19445/tcp": 19445
   },
   "ports_description": {
-    "8090/tcp": "web interface"
+    "8090/tcp": "web interface",
+    "19333/tcp": "Boblight Server",
+    "19400/tcp": "Flatbuffers Server",
+    "19444/tcp": "JSON Server",
+    "19445/tcp": "Protocol Buffers Server"
   },
   "map": [
     "config:rw",
