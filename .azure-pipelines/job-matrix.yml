@@ -1,0 +1,8 @@
+jobs:
+  - ${{ each addon in parameters.matrix }}:
+    - template: addon-job.yml
+      parameters:
+        poolVmImage: ${{ addon.poolVmImage }}
+        addon: ${{ addon.name }}
+        arch: ${{ addon.arch }}
+        name: ${{ addon.jobName }}
