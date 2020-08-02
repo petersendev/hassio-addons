@@ -6,6 +6,7 @@ parameters:
 
 jobs:
   - job: ${{ parameters.jobName }}
+    dispayName: ${{ parameters.addon }} 
     pool:
       vmImage: ${{ parameters.poolVmImage }}
     steps:

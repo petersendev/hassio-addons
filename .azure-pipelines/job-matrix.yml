@@ -1,7 +1,7 @@
 jobs:
-  - ${{ each addon in parameters.matrix }}:
+  - ${{ each entry in parameters.matrix }}:
     - template: addon-job.yml
       parameters:
-        addon: ${{ addon.name }}
-        arch: ${{ addon.arch }}
-        name: ${{ addon.jobName }}
+        addon: ${{ entry.addon }}
+        arch: ${{ entry.arch }}
+        name: ${{ entry.jobName }}
