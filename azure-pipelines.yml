@@ -56,7 +56,7 @@ stages:
             - addon: jackett
               jobName: jackett
               arch: '--armhf --amd64 --aarch64'
-              - addon: znc
+            - addon: znc
               jobName: znc
               arch: '--armhf --amd64 --aarch64'
             - addon: hydra2
