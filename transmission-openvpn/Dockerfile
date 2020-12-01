@@ -16,10 +16,11 @@ RUN curl -J -L -o /tmp/bashio.tar.gz \
 RUN usermod -d /config-internal abc \
     && sed -i "s|/config|/config-internal|g" /etc/openvpn/adjustConfigs.sh \
     && sed -i "s|/config|/config-internal|g" /etc/openvpn/updateConfigs.sh \
+    && sed -i "s|/config|/config-internal|g" /etc/openvpn/modify-openvpn-config.sh \
     && sed -i "s|/config|/config-internal|g" /etc/openvpn/start.sh \
-    && find /etc/openvpn/*/ -type f -name '*.sh' -exec sed -i "s|/config|/config-internal|g" {} \; \
-    && sed -i "s|/config|/config-internal|g" /etc/transmission/updatePort.sh \
-    && sed -i "s|/config|/config-internal|g" /etc/transmission/updatePPPort.sh \
+    && sed -i "s|/config-internalure-openvpn.sh|/configure-openvpn.sh|g" /etc/openvpn/start.sh \
+    && find /etc/openvpn/*/ -type f -name '*.sh' -exec sed -i "s|/config/|/config-internal/|g" {} \; \
+    && find /etc/openvpn/*/ -type f -name '*.sh' -exec sed -i 's|/config\\/|/config-internal\\/|g' {} \; \
     && sed -i "s|/config|/config-internal|g" /etc/transmission/userSetup.sh
 
 # copy local files
