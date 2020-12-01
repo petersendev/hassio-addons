@@ -4,9 +4,9 @@
         "version": "3.2"
     },
     "build_from": {
-        "armhf": "haugene/transmission-openvpn:3.2-armhf",
-        "aarch64": "haugene/transmission-openvpn:3.2-arm64",
-        "amd64": "haugene/transmission-openvpn:3.2-alpine"
+        "armhf": "haugene/transmission-openvpn:3.2",
+        "aarch64": "haugene/transmission-openvpn:3.2",
+        "amd64": "haugene/transmission-openvpn:3.2"
     },
     "squash": false,
     "args": {}
