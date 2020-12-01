@@ -10,6 +10,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
+        libcec4=4.0.4+dfsg1-2 \
 		libjpeg62-turbo=1:1.5.2-2+b1 \
 		libavahi-compat-libdnssd1=0.7-4+b1 \
 		libdbus-1-3=1.12.20-0+deb10u1 \

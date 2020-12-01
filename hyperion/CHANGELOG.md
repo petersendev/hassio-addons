@@ -1,3 +1,7 @@
+## 0.4.0
+
+ - Update hyperion to 2.0.0-alpha.9 (2.0.0-alpha.9)
+
 ## 0.3.0
 
  - Update hyperion to 2.0.0-alpha.8 (2.0.0-alpha.8)
