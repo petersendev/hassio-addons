@@ -1,3 +1,7 @@
+## 0.6.1
+
+ - Fix credentials for included openvpn profiles
+
 ## 0.6.0
 
  - Update transmission-openvpn to 3.2 (haugene/transmission-openvpn:3.2)

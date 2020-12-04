@@ -21,6 +21,7 @@ RUN usermod -d /config-internal abc \
     && sed -i "s|/config-internalure-openvpn.sh|/configure-openvpn.sh|g" /etc/openvpn/start.sh \
     && find /etc/openvpn/*/ -type f -name '*.sh' -exec sed -i "s|/config/|/config-internal/|g" {} \; \
     && find /etc/openvpn/*/ -type f -name '*.sh' -exec sed -i 's|/config\\/|/config-internal\\/|g' {} \; \
+    && find /etc/openvpn/*/ -type f -name '*.ovpn' -exec sed -i "s|/config/|/config-internal/|g" {} \; \
     && sed -i "s|/config|/config-internal|g" /etc/transmission/userSetup.sh
 
 # copy local files
