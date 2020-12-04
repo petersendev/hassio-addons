@@ -1,3 +1,7 @@
+## 0.6.2
+
+ - Support TRANSMISSION_WEB_HOME and TRANSMISSION_WEB_UI
+
 ## 0.6.1
 
  - Fix credentials for included openvpn profiles
