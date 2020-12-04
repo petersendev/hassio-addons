@@ -1,6 +1,6 @@
 {
   "name": "transmission-openvpn",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "slug": "transmission-openvpn",
   "legacy": false,
   "maintenance": {
@@ -130,6 +130,8 @@
     "TRANSMISSION_WATCH_DIR_ENABLED": "bool?",
     "TRANSMISSION_WATCH_DIR_FORCE_GENERIC": "str?",
     "TRANSMISSION_WATCH_DIR": "str?",
+    "TRANSMISSION_WEB_HOME": "str?",
+    "TRANSMISSION_WEB_UI": "str?",
     "UFW_ALLOW_GW_NET": "str?",
     "UFW_DISABLE_IPTABLES_REJECT": "str?",
     "UFW_EXTRA_PORTS": "str?",
