@@ -1,3 +1,7 @@
+## 0.7.0
+
+ - Update transmission-openvpn to 3.3 (haugene/transmission-openvpn:3.3)
+
 ## 0.6.2
 
  - Support TRANSMISSION_WEB_HOME and TRANSMISSION_WEB_UI
