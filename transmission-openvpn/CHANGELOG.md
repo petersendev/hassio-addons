@@ -1,3 +1,7 @@
+## 0.8.0
+
+ - Update transmission-openvpn to 3.4 (haugene/transmission-openvpn:3.4)
+
 ## 0.7.0
 
  - Update transmission-openvpn to 3.3 (haugene/transmission-openvpn:3.3)
