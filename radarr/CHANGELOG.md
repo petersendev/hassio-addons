@@ -1,3 +1,7 @@
+## 0.7.0
+
+ - Update radarr to 3.0.2.4552 (linuxserver/radarr:3.0.2.4552-ls98)
+
 ## 0.6.1
 
  - Mount /media folder
