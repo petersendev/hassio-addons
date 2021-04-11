@@ -1,11 +1,11 @@
 {
   "name": "radarr",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "slug": "radarr",
   "legacy": false,
   "maintenance": {
     "github_release": "https://github.com/linuxserver/docker-radarr",
-    "version_regex": "v(\\d+\\.\\d+\\.\\d+\\.\\d+)-(ls\\d+)"
+    "version_regex": "(\\d+\\.\\d+\\.\\d+\\.\\d+)-(ls\\d+)"
   },
   "description": "A fork of Sonarr to work with movies à la Couchpotato",
   "url": "https://github.com/petersendev/hassio-addons/tree/master/radarr#readme",
