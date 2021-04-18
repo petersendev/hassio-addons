@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+if [ -d /config/jackett/CustomDefinitions ]; then
+  echo "Copying custom definitions"
+  cp /config/jackett/CustomDefinitions/* /app/Jackett/Definitions/
+fi
+

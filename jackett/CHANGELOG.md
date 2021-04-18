@@ -1,3 +1,7 @@
+## 0.22.1
+
+ - Support custom definitions (~config/jackett/CustomDefinitions/*.yml)
+
 ## 0.22.0
 
  - Update jackett to 0.17.892 (linuxserver/jackett:v0.17.892-ls29)
