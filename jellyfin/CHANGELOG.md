@@ -1,3 +1,7 @@
+## 0.8.0
+
+ - Update jellyfin to 10.7.2-1 (linuxserver/jellyfin:10.7.2-1-ls107)
+
 ## 0.7.0
 
  - Update jellyfin to 10.7.1-1 (linuxserver/jellyfin:10.7.1-1-ls104)
