@@ -26,7 +26,7 @@
   "map": [
     "config:rw",
     "share:rw",
-    "ssl"
+    "ssl:rw"
   ],
   "webui": "http://[HOST]:[PORT:82]",
   "boot": "auto",
