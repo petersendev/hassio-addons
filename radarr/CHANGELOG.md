@@ -1,3 +1,7 @@
+## 0.8.0
+
+ - Update radarr to 3.2.2.5080 (linuxserver/radarr:3.2.2.5080-ls105)
+
 ## 0.7.0
 
  - Update radarr to 3.0.2.4552 (linuxserver/radarr:3.0.2.4552-ls98)
