@@ -6,15 +6,16 @@ parameters:
   additionalArgs: ''
 
 steps:
-  - script: sudo docker login -u $(dockerUser) -p $(dockerPassword)
-    displayName: 'DockerHub login'
   - script: sudo docker pull homeassistant/amd64-builder:$(versionBuilder)
     displayName: 'Install Builder'
   - script: |
       sudo docker run --rm --privileged \
         -v ~/.docker:/root/.docker \
-        -v /run/docker.sock:/run/docker.sock:rw -v $(pwd):/data:ro \
+        -v /run/docker.sock:/run/docker.sock:rw \
+        -v $(pwd):/data:ro \
         homeassistant/amd64-builder:$(versionBuilder) \
+        --docker-user $(dockerUser) \
+        --docker-password $(dockerPassword) \
         --addon ${{ parameters.arch }} -t /data/${{ parameters.addon }} \
         --docker-hub petersendev --docker-hub-check ${{ parameters.additionalArgs }}
     displayName: 'Build ${{ parameters.addon }}'
