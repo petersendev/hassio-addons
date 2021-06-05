@@ -2,7 +2,7 @@ parameters:
     jobName:
     addon: 
     arch: '--armhf --amd64 --aarch64'
-    poolVmImage: 'ubuntu-16.04'
+    poolVmImage: 'ubuntu-latest'
 
 jobs:
   - job: ${{ parameters.jobName }}

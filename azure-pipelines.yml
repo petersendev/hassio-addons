@@ -12,7 +12,7 @@ stages:
     jobs:
       - job: 'Hadolint'
         pool:
-          vmImage: 'ubuntu-16.04'
+          vmImage: 'ubuntu-latest'
         steps:
         - script: sudo docker pull hadolint/hadolint:$(versionHadolint)
           displayName: 'Install Hadolint'
@@ -30,7 +30,7 @@ stages:
 
       - job: 'JQ'
         pool:
-          vmImage: 'ubuntu-16.04'
+          vmImage: 'ubuntu-latest'
         steps:
         - script: sudo apt-get install -y jq
           displayName: 'Install JQ'
