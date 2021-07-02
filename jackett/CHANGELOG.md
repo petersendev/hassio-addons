@@ -1,3 +1,7 @@
+## 0.24.0
+
+ - Update jackett to 0.18.390 (linuxserver/jackett:v0.18.390-ls35)
+
 ## 0.23.0
 
  - Update jackett to 0.18.234 (linuxserver/jackett:v0.18.234-ls32)
