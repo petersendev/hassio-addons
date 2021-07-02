@@ -1,12 +1,12 @@
 {
     "build_from_template": {
         "image": "linuxserver/sonarr",
-        "version": "3.0.6.1196-ls101"
+        "version": "3.0.6.1265-ls111"
     },
     "build_from": {
-        "armhf": "linuxserver/sonarr:arm32v7-3.0.6.1196-ls101",
-        "aarch64": "linuxserver/sonarr:arm64v8-3.0.6.1196-ls101",
-        "amd64": "linuxserver/sonarr:amd64-3.0.6.1196-ls101"
+        "armhf": "linuxserver/sonarr:arm32v7-3.0.6.1265-ls111",
+        "aarch64": "linuxserver/sonarr:arm64v8-3.0.6.1265-ls111",
+        "amd64": "linuxserver/sonarr:amd64-3.0.6.1265-ls111"
     },
     "squash": false,
     "args": {}
