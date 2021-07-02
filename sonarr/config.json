@@ -1,6 +1,6 @@
 {
   "name": "sonarr",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "slug": "sonarr",
   "legacy": false,
   "maintenance": {

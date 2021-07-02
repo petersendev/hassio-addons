@@ -1,12 +1,12 @@
 {
     "build_from_template": {
         "image": "linuxserver/jellyfin",
-        "version": "10.7.5-1-ls115"
+        "version": "10.7.6-1-ls120"
     },
     "build_from": {
-        "armhf": "linuxserver/jellyfin:arm32v7-10.7.5-1-ls115",
-        "aarch64": "linuxserver/jellyfin:arm64v8-10.7.5-1-ls115",
-        "amd64": "linuxserver/jellyfin:amd64-10.7.5-1-ls115"
+        "armhf": "linuxserver/jellyfin:arm32v7-10.7.6-1-ls120",
+        "aarch64": "linuxserver/jellyfin:arm64v8-10.7.6-1-ls120",
+        "amd64": "linuxserver/jellyfin:amd64-10.7.6-1-ls120"
     },
     "squash": false,
     "args": {}
