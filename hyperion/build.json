@@ -6,6 +6,6 @@
     },
     "squash": false,
     "args": {
-        "RELEASE": "2.0.0-alpha.9"
+        "RELEASE": "2.0.0-alpha.10"
     }
 }
