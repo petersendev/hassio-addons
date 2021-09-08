@@ -1,3 +1,6 @@
+## 0.8.1
+ - snapshot_exclude -> backup_exclude
+
 ## 0.8.0
 
  - Update radarr to 3.2.2.5080 (linuxserver/radarr:3.2.2.5080-ls105)
