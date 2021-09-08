@@ -1,6 +1,6 @@
 {
   "name": "hydra2",
-  "version": "0.22.0",
+  "version": "0.22.1",
   "slug": "hydra2",
   "legacy": false,
   "maintenance": {
@@ -37,7 +37,7 @@
     "PGID": "int",
     "TZ": "str?"
   },
-  "snapshot_exclude": [
+  "backup_exclude": [
     "**/backup/*",
     "**/logs/*"
   ],
