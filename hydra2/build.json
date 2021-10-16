@@ -1,12 +1,12 @@
 {
     "build_from_template": {
         "image": "linuxserver/nzbhydra2",
-        "version": "v3.15.2-ls30"
+        "version": "v3.17.3-ls34"
     },
     "build_from": {
-        "armhf": "linuxserver/nzbhydra2:arm32v7-v3.15.2-ls30",
-        "aarch64": "linuxserver/nzbhydra2:arm64v8-v3.15.2-ls30",
-        "amd64": "linuxserver/nzbhydra2:amd64-v3.15.2-ls30"
+        "armhf": "linuxserver/nzbhydra2:arm32v7-v3.17.3-ls34",
+        "aarch64": "linuxserver/nzbhydra2:arm64v8-v3.17.3-ls34",
+        "amd64": "linuxserver/nzbhydra2:amd64-v3.17.3-ls34"
     },
     "squash": false,
     "args": {}

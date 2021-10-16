@@ -1,3 +1,7 @@
+## 0.23.0
+
+ - Update hydra2 to 3.17.3 (linuxserver/nzbhydra2:v3.17.3-ls34)
+
 ## 0.22.1
  - snapshot_exclude -> backup_exclude
  

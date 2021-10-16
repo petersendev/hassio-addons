@@ -1,3 +1,7 @@
+## 0.7.0
+
+ - Update sonarr to 3.0.6.1342 (linuxserver/sonarr:3.0.6.1342-ls125)
+
 ## 0.6.1
  - snapshot_exclude -> backup_exclude
 
