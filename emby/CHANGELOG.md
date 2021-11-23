@@ -1,3 +1,7 @@
+## 0.12.0
+
+ - Update emby to 4.6.7.0 (linuxserver/emby:4.6.7.0-ls103)
+
 ## 0.11.0
 
  - Update emby to 4.6.4.0 (linuxserver/emby:4.6.4.0-ls88)
