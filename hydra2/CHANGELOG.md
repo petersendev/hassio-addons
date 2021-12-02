@@ -1,3 +1,7 @@
+## 0.24.0
+
+ - Update hydra2 to 3.18.1 (linuxserver/nzbhydra2:v3.18.1-ls38)
+
 ## 0.23.0
 
  - Update hydra2 to 3.17.3 (linuxserver/nzbhydra2:v3.17.3-ls34)
