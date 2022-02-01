@@ -1,12 +1,12 @@
 {
     "build_from_template": {
         "image": "linuxserver/radarr",
-        "version": "3.2.2.5080-ls105"
+        "version": "4.0.4.5922-ls129"
     },
     "build_from": {
-        "armhf": "linuxserver/radarr:arm32v7-3.2.2.5080-ls105",
-        "aarch64": "linuxserver/radarr:arm64v8-3.2.2.5080-ls105",
-        "amd64": "linuxserver/radarr:amd64-3.2.2.5080-ls105"
+        "armhf": "linuxserver/radarr:arm32v7-4.0.4.5922-ls129",
+        "aarch64": "linuxserver/radarr:arm64v8-4.0.4.5922-ls129",
+        "amd64": "linuxserver/radarr:amd64-4.0.4.5922-ls129"
     },
     "squash": false,
     "args": {}
