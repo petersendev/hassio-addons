@@ -1,3 +1,7 @@
+## 0.9.0
+
+ - Update radarr to 4.0.4.5922 (linuxserver/radarr:4.0.4.5922-ls129)
+
 ## 0.8.1
  - snapshot_exclude -> backup_exclude
 
