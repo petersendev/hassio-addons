@@ -1,12 +1,12 @@
 {
     "build_from_template": {
         "image": "linuxserver/heimdall",
-        "version": "2.2.2-ls149"
+        "version": "v2.4.10-ls166"
     },
     "build_from": {
-        "armhf": "linuxserver/heimdall:arm32v7-2.2.2-ls149",
-        "aarch64": "linuxserver/heimdall:arm64v8-2.2.2-ls149",
-        "amd64": "linuxserver/heimdall:amd64-2.2.2-ls149"
+        "armhf": "linuxserver/heimdall:arm32v7-v2.4.10-ls166",
+        "aarch64": "linuxserver/heimdall:arm64v8-v2.4.10-ls166",
+        "amd64": "linuxserver/heimdall:amd64-v2.4.10-ls166"
     },
     "squash": false,
     "args": {}
