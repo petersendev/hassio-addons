@@ -1,3 +1,7 @@
+## 0.8.0
+
+ - Update sonarr to 3.0.7.1477 (linuxserver/sonarr:3.0.7.1477-ls140)
+
 ## 0.7.0
 
  - Update sonarr to 3.0.6.1342 (linuxserver/sonarr:3.0.6.1342-ls125)
