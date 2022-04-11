@@ -5,7 +5,7 @@ trigger:
 
 variables:
   versionHadolint: 'v1.16.3'
-  versionBuilder: 'latest'
+  versionBuilder: '2022.01.0'
 
 stages:
   - stage: lint
