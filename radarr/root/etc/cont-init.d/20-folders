@@ -16,4 +16,42 @@ if [ ! -d /config/radarr ]; then
   echo "Creating /config/radarr"
   mkdir -p /config/radarr
   chown -R abc:abc /config/radarr
+
+  echo "Creating /data/radarr and required directories"
+  mkdir -p /data/radarr
+  mkdir -p /data/radarr/Backups
+  mkdir -p /data/radarr/logs
+  mkdir -p /data/radarr/UpdateLogs
+  mkdir -p /data/radarr/MediaCover
+  chown -R abc:abc /data/radarr
+
+  echo "Symlinking large folders to addon directory"
+  ln -s /data/radarr/Backups /config/radarr/Backups
+  ln -s /data/radarr/logs /config/radarr/logs
+  ln -s /data/radarr/UpdateLogs /config/radarr/UpdateLogs
+  ln -s /data/radarr/MediaCover /config/radarr/MediaCover
+else #existing config found; check if /data subdir has been created yet
+  if [ ! -d /data/radarr ]; then #if not then move and symlink files, otherwise do nothing
+    echo "Creating /data/radarr and required directories"
+    mkdir -p /data/radarr
+    mkdir -p /data/radarr/Backups
+    mkdir -p /data/radarr/logs
+    mkdir -p /data/radarr/UpdateLogs
+    mkdir -p /data/radarr/MediaCover
+    chown -R abc:abc /data/radarr
+    
+    echo "Moving and symlinking large folders to addon directory"
+    mv /config/radarr/Backups/* /data/radarr/Backups/
+    rmdir /config/radarr/Backups
+    ln -s /data/radarr/Backups /config/radarr/Backups
+    mv /config/radarr/logs/* /data/radarr/logs/
+    rmdir /config/radarr/logs
+    ln -s /data/radarr/logs /config/radarr/logs
+    mv /config/radarr/UpdateLogs/* /data/radarr/UpdateLogs/
+    rmdir /config/radarr/UpdateLogs
+    ln -s /data/radarr/UpdateLogs /config/radarr/UpdateLogs
+    mv /config/radarr/MediaCover/* /data/radarr/MediaCover/
+    rmdir /config/radarr/MediaCover
+    ln -s /data/radarr/MediaCover /config/radarr/MediaCover
+  fi
 fi
