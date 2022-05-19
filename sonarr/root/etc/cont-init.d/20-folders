@@ -16,4 +16,42 @@ if [ ! -d /config/sonarr ]; then
   echo "Creating /config/sonarr"
   mkdir -p /config/sonarr
   chown -R abc:abc /config/sonarr
+
+  echo "Creating /data/sonarr and required directories"
+  mkdir -p /data/sonarr
+  mkdir -p /data/sonarr/Backups
+  mkdir -p /data/sonarr/logs
+  mkdir -p /data/sonarr/UpdateLogs
+  mkdir -p /data/sonarr/MediaCover
+  chown -R abc:abc /data/sonarr
+
+  echo "Symlinking large folders to addon directory"
+  ln -s /data/sonarr/Backups /config/sonarr/Backups
+  ln -s /data/sonarr/logs /config/sonarr/logs
+  ln -s /data/sonarr/UpdateLogs /config/sonarr/UpdateLogs
+  ln -s /data/sonarr/MediaCover /config/sonarr/MediaCover
+else #existing config found; check if /data subdir has been created yet
+  if [ ! -d /data/sonarr ]; then #if not then move and symlink files, otherwise do nothing
+    echo "Creating /data/sonarr"
+    mkdir -p /data/sonarr
+    mkdir -p /data/sonarr/Backups
+    mkdir -p /data/sonarr/logs
+    mkdir -p /data/sonarr/UpdateLogs
+    mkdir -p /data/sonarr/MediaCover
+    chown -R abc:abc /data/sonarr
+    
+    echo "Moving and symlinking large folders to addon directory"
+    mv /config/sonarr/Backups/* /data/sonarr/Backups/
+    rmdir /config/sonarr/Backups
+    ln -s /data/sonarr/Backups /config/sonarr/Backups
+    mv /config/sonarr/logs/* /data/sonarr/logs/
+    rmdir /config/sonarr/logs
+    ln -s /data/sonarr/logs /config/sonarr/logs
+    mv /config/sonarr/UpdateLogs/* /data/sonarr/UpdateLogs/
+    rmdir /config/sonarr/UpdateLogs
+    ln -s /data/sonarr/UpdateLogs /config/sonarr/UpdateLogs
+    mv /config/sonarr/MediaCover/* /data/sonarr/MediaCover/
+    rmdir /config/sonarr/MediaCover
+    ln -s /data/sonarr/MediaCover /config/sonarr/MediaCover
+  fi
 fi
