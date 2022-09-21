@@ -16,10 +16,12 @@
     "armhf"
   ],
   "ports": {
-    "8096/tcp": 8096
+    "8096/tcp": 8096,
+    "1900/tcp": 1900,
   },
   "ports_description": {
-    "8096/tcp": "web interface"
+    "8096/tcp": "web interface",
+    "1900/tcp": "dlna",
   },
   "map": [
     "config:rw",
