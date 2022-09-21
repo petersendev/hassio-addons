@@ -17,11 +17,11 @@
   ],
   "ports": {
     "8096/tcp": 8096,
-    "1900/udp": 1900,
+    "1900/udp": 1900
   },
   "ports_description": {
     "8096/tcp": "web interface",
-    "1900/udp": "dlna",
+    "1900/udp": "dlna"
   },
   "map": [
     "config:rw",
