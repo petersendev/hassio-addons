@@ -1,3 +1,7 @@
+## 0.8.0
+
+ - Update hyperion to 2.0.14 (2.0.14)
+
 ## 0.7.0
 
  - Update hyperion to 2.0.12 (2.0.12)
