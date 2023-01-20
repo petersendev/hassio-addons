@@ -27,7 +27,8 @@ RUN sed -i "s|/config/keys/cert.crt|/ssl/fullchain.pem|g" /defaults/nginx/*.samp
     sed -i "s|/config|/config/heimdall|g" /etc/cont-init.d/* && \
     sed -i "s|/config|/config/heimdall|g" /etc/services.d/nginx/* && \
     sed -i "s|/config|/config/heimdall|g" /etc/logrotate.d/* && \
-    sed -i "s|/config|/config/heimdall|g" /etc/nginx/*
+    sed -i "s|/config|/config/heimdall|g" /etc/nginx/*.conf && \
+    sed -i "s|/config|/config/heimdall|g" /etc/php8/*.conf
 
 # copy local files
 COPY root/ /
