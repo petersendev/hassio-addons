@@ -8,7 +8,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        jq=1.6-1ubuntu0.20.04.1 \    
+        jq=1.6-2.1ubuntu3 \    
     \
     && curl -J -L -o /tmp/bashio.tar.gz \
         "https://github.com/hassio-addons/bashio/archive/v0.7.1.tar.gz" \
@@ -24,8 +24,8 @@ RUN apt-get update \
       /var/{cache,log}/* \
       /var/lib/apt/lists/*
 
-RUN sed -i "s|/config|/emby|g" /etc/services.d/emby/run \
-    && sed -i "s|/config|/emby|g" /etc/cont-init.d/30-config 
+RUN sed -i "s|/config/config|/config/emby/config|g" /etc/s6-overlay/s6-rc.d/init-emby/run \
+    && sed -i "s|/config|/config/emby|g" /etc/s6-overlay/s6-rc.d/svc-emby/run 
 
 # copy local files
 COPY root/ /
