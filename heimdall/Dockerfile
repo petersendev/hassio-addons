@@ -16,17 +16,18 @@ RUN apk add --no-cache \
     && rm -fr /tmp/* 
 
 # fix folders for hassio environment
-RUN sed -i "s|/config/keys/cert.crt|/ssl/fullchain.pem|g" /defaults/default && \
-    sed -i "s|/config/keys/cert.key|/ssl/privkey.pem|g" /defaults/default && \    
-    sed -i "s|/config|/config/heimdall|g" /defaults/default && \
-    sed -i "s|/config|/config/heimdall|g" /defaults/nginx.conf && \
+RUN sed -i "s|/config/keys/cert.crt|/ssl/fullchain.pem|g" /defaults/nginx/*.sample && \
+    sed -i "s|/config/keys/cert.key|/ssl/privkey.pem|g" /defaults/nginx/*.sample && \    
+    sed -i "s|/config|/config/heimdall|g" /defaults/nginx/*.sample && \
+    sed -i "s|/config|/config/heimdall|g" /defaults/nginx/site-confs/* && \
+    sed -i "s|/config|/config/heimdall|g" /migrations/* && \
     sed -i "s|/config/keys/cert.crt|/ssl/fullchain.pem|g" /etc/cont-init.d/* && \
     sed -i "s|/config/keys/cert.key|/ssl/privkey.pem|g" /etc/cont-init.d/* && \
     sed -i "s|/config/heimdall/keys|/ssl|g" /etc/cont-init.d/* && \    
     sed -i "s|/config|/config/heimdall|g" /etc/cont-init.d/* && \
     sed -i "s|/config|/config/heimdall|g" /etc/services.d/nginx/* && \
-    sed -i "s|/config|/config/heimdall|g" /etc/logrotate.d/heimdall
-
+    sed -i "s|/config|/config/heimdall|g" /etc/logrotate.d/* && \
+    sed -i "s|/config|/config/heimdall|g" /etc/nginx/*
 
 # copy local files
 COPY root/ /

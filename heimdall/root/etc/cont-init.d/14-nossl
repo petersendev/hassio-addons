@@ -3,8 +3,8 @@
 if [ ! -f /ssl/fullchain.pem ]; then
   echo "No Home Assistant SSL certificates found, changing paths for self-generated certificates" && \
   mkdir -p /config/heimdall/keys && \
-  sed -i "s|/ssl/fullchain.pem|/config/heimdall/keys/cert.crt|g" /defaults/default && \
-  sed -i "s|/ssl/privkey.pem|/config/heimdall/keys/cert.key|g" /defaults/default && \
+  sed -i "s|/ssl/fullchain.pem|/config/heimdall/keys/cert.crt|g" /defaults/nginx/*.sample && \
+  sed -i "s|/ssl/privkey.pem|/config/heimdall/keys/cert.key|g" /defaults/nginx/*.sample && \
   sed -i "s|/ssl/fullchain.pem|/config/heimdall/keys/cert.crt|g" /config/heimdall/nginx/site-confs/* && \
   sed -i "s|/ssl/privkey.pem|/config/heimdall/keys/cert.key|g" /config/heimdall/nginx/site-confs/* && \
   sed -i "s|/ssl/fullchain.pem|/config/heimdall/keys/cert.crt|g" /etc/cont-init.d/* && \
