@@ -1,12 +1,12 @@
 {
     "build_from_template": {
         "image": "haugene/transmission-openvpn",
-        "version": "4.0"
+        "version": "4.3"
     },
     "build_from": {
-        "armhf": "haugene/transmission-openvpn:4.0",
-        "aarch64": "haugene/transmission-openvpn:4.0",
-        "amd64": "haugene/transmission-openvpn:4.0"
+        "armhf": "haugene/transmission-openvpn:4.3",
+        "aarch64": "haugene/transmission-openvpn:4.3",
+        "amd64": "haugene/transmission-openvpn:4.3"
     },
     "squash": false,
     "args": {}

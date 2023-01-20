@@ -14,8 +14,8 @@ RUN curl -J -L -o /tmp/bashio.tar.gz \
     && rm -fr /tmp/* 
 
 # use /data instead of /config for hass.io environment
-RUN sed -i "s|/config|/config/hydra2|g" /etc/services.d/nzbhydra2/run \
-    && sed -i "s|/config|/config/hydra2|g" /etc/cont-init.d/30-config
+RUN sed -i "s|/config|/config/hydra2|g" /etc/s6-overlay/s6-rc.d/init-nzbhydra2-config/run \
+    && sed -i "s|/config|/config/hydra2|g" /etc/s6-overlay/s6-rc.d/svc-nzbhydra2/run 
 
 # copy local files
 COPY root/ /

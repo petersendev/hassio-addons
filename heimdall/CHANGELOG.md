@@ -1,3 +1,7 @@
+## 0.3.0
+
+ - Update heimdall to 2.5.5 (linuxserver/heimdall:v2.5.5-ls198)
+
 ## 0.2.0
 
  - Update heimdall to 2.4.10 (linuxserver/heimdall:v2.4.10-ls166)

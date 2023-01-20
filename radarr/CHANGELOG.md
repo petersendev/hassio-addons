@@ -1,3 +1,7 @@
+## 0.11.0
+
+ - Update radarr to 4.3.2.6857 (linuxserver/radarr:4.3.2.6857-ls160)
+
 ## 0.10.0
 
  - Update radarr to 4.0.5.5981 (linuxserver/radarr:4.0.5.5981-ls136)

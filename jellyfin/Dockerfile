@@ -8,7 +8,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        jq=1.6-1ubuntu0.20.04.1 \
+        jq=1.6-2.1ubuntu3 \
     \
     && curl -J -L -o /tmp/bashio.tar.gz \
         "https://github.com/hassio-addons/bashio/archive/v0.7.1.tar.gz" \
@@ -24,16 +24,15 @@ RUN apt-get update \
       /var/{cache,log}/* \
       /var/lib/apt/lists/*
 
-RUN sed -i "s|/config/data|/share/jellyfin/data|g" /etc/services.d/jellyfin/run \
-    && sed -i "s|/config/log|/share/jellyfin/log|g" /etc/services.d/jellyfin/run \
-    && sed -i "s|/config/cache|/share/jellyfin/cache|g" /etc/services.d/jellyfin/run \
-    && sed -i "s|/config|/config/jellyfin|g" /etc/services.d/jellyfin/run \
-    && sed -i "s|/config/{log,data,cache}|/xxx/jellyfin|g" /etc/cont-init.d/30-config \
-    && sed -i "s|/config|/config/jellyfin|g" /etc/cont-init.d/30-config \
-    && sed -i "s|/xxx|/config|g" /etc/cont-init.d/30-config \
-    && sed -i "s|/data|/share/jellyfin/data|g" /etc/cont-init.d/30-config
-
-RUN cat /etc/services.d/jellyfin/run && cat /etc/cont-init.d/30-config
+RUN sed -i "s|/config/data|/share/jellyfin/data|g" /etc/s6-overlay/s6-rc.d/svc-jellyfin/run \
+    && sed -i "s|/config/log|/share/jellyfin/log|g" /etc/s6-overlay/s6-rc.d/svc-jellyfin/run \
+    && sed -i "s|/config/cache|/share/jellyfin/cache|g" /etc/s6-overlay/s6-rc.d/svc-jellyfin/run \
+    && sed -i "s|/config|/config/jellyfin|g" /etc/s6-overlay/s6-rc.d/svc-jellyfin/run \
+    && sed -i "s|/config/data/transcodes|/xxx/transcodes|g" /etc/s6-overlay/s6-rc.d/init-jellyfin-config/run  \
+    && sed -i "s|/config|/config/jellyfin|g" /etc/s6-overlay/s6-rc.d/init-jellyfin-config/run  \
+    && sed -i "s|/data|/share/jellyfin/data|g" /etc/s6-overlay/s6-rc.d/init-jellyfin-config/run  \
+    && sed -i "s|/xxx/transcodes|/config/jellyfin/data/transcodes|g" /etc/s6-overlay/s6-rc.d/init-jellyfin-config/run  \
+    && cat /etc/s6-overlay/s6-rc.d/init-jellyfin-config/run
 
 # copy local files
 COPY root/ /
