@@ -1,4 +1,4 @@
-## 0.27.1
+## 0.27.2
 
  - Update hydra2 to 4.7.6 (linuxserver/nzbhydra2:v4.7.6-ls83)
 

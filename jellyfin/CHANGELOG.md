@@ -1,4 +1,4 @@
-## 0.12.1
+## 0.12.2
 
  - Update jellyfin to 10.8.8-1 (linuxserver/jellyfin:10.8.8-1-ls196)
 
