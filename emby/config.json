@@ -1,8 +1,9 @@
 {
   "name": "emby",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "slug": "emby",
   "legacy": false,
+  "init": false,
   "maintenance": {
     "github_release": "https://github.com/linuxserver/docker-emby",
     "version_regex": "(\\d+\\.\\d+\\.\\d+.\\d+)-(ls\\d+)"

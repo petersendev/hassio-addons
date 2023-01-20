@@ -1,8 +1,9 @@
 {
   "name": "hydra2",
-  "version": "0.27.0",
+  "version": "0.27.1",
   "slug": "hydra2",
   "legacy": false,
+  "init": false,
   "maintenance": {
     "github_release": "https://github.com/linuxserver/docker-nzbhydra2",
     "version_regex": "v(\\d+\\.\\d+\\.\\d+)-(ls\\d+)"
