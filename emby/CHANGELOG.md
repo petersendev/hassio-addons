@@ -1,4 +1,4 @@
-## 0.13.0
+## 0.13.1
 
  - Update emby to 4.7.11.0 (linuxserver/emby:4.7.11.0-ls141)
 

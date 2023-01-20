@@ -1,8 +1,9 @@
 {
   "name": "jellyfin",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "slug": "jellyfin",
   "legacy": false,
+  "init": false,
   "maintenance": {
     "github_release": "https://github.com/linuxserver/docker-jellyfin",
     "version_regex": "(\\d+\\.\\d+\\.\\d+[-]*\\d*)-(ls\\d+)"
