@@ -1,4 +1,4 @@
-## 0.9.0
+## 0.9.1
 
  - Update sonarr to 3.0.9.1549 (linuxserver/sonarr:3.0.9.1549-ls173)
 
