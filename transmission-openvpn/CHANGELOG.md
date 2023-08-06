@@ -1,3 +1,7 @@
+## 0.13.0
+
+ - Update transmission-openvpn to 5.0 (haugene/transmission-openvpn:5.0)
+
 ## 0.12.0
 
  - Update transmission-openvpn to 4.3 (haugene/transmission-openvpn:4.3)
