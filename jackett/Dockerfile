@@ -14,7 +14,7 @@ RUN curl -J -L -o /tmp/bashio.tar.gz \
     && rm -fr /tmp/* 
 
 # use /data instead of /config for hass.io environment
-RUN sed -i "s|/config|/config/jackett|g" /etc/cont-init.d/30-config
+RUN sed -i "s|/config|/config/jackett|g" /etc/s6-overlay/s6-rc.d/init-jackett-config/run
 
 ENV XDG_DATA_HOME="/share/jackett" \
 XDG_CONFIG_HOME="/config/jackett"
