@@ -1,4 +1,4 @@
-# Hassio Add-ons by petersendev: HYDRA2
+# Hassio Add-ons by petersendev: AUDIOBOOKSHELF
 
 ## About
 
