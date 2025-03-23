@@ -80,3 +80,6 @@ stages:
             - addon: heimdall
               jobName: heimdall
               arch: '--armhf --amd64 --aarch64'
+            - addon: audiobookshelf
+              jobName: audiobookshelf
+              arch: '--amd64'

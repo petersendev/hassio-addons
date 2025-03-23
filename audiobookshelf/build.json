@@ -1,0 +1,11 @@
+{
+    "build_from_template": {
+        "image": "ghcr.io/advplyr/audiobookshelf",
+        "version": "2.20.0"
+    },
+    "build_from": {
+        "amd64": "ghcr.io/advplyr/audiobookshelf:2.20.0"
+    },
+    "squash": false,
+    "args": {}
+}

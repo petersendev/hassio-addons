@@ -17,6 +17,9 @@ https://github.com/petersendev/hassio-addons
 
 [//]: # (ADDONLIST_START)
 
+### [audiobookshelf](audiobookshelf/)
+Self-hosted audiobook and podcast server
+
 ### [emby](emby/)
 A Free Software Media System that puts you in control of managing and streaming your media.
 
