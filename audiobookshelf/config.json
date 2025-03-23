@@ -1,0 +1,44 @@
+{
+  "name": "audiobookshelf",
+  "version": "0.1.0",
+  "slug": "audiobookshelf",
+  "legacy": false,
+  "init": false,
+  "maintenance": {
+    "github_release": "https://github.com/advplyr/audiobookshelf",
+    "version_regex": "v(\\d+\\.\\d+\\.\\d+)-(ls\\d+)"
+  },
+  "description": "Self-hosted audiobook and podcast server",
+  "url": "https://github.com/petersendev/hassio-addons/tree/master/audiobookshelf#readme",
+  "startup": "services",
+  "arch": [
+    "amd64"
+  ],
+  "ports": {
+    "80/tcp": 9095
+  },
+  "ports_description": {
+    "80/tcp": "web interface"
+  },
+  "map": [
+    "config:rw",
+    "share:rw",
+    "ssl"
+  ],
+  "webui": "http://[HOST]:[PORT:9095]",
+  "boot": "auto",
+  "options": {
+    "PUID": 1001,
+    "PGID": 1001
+  },
+  "schema": {
+    "PUID": "int",
+    "PGID": "int",
+    "TZ": "str?"
+  },
+  "backup_exclude": [
+    "**/backup/*",
+    "**/logs/*"
+  ],
+  "image": "petersendev/hassio-audiobookshelf-{arch}"
+}
