@@ -2,7 +2,10 @@ ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM $BUILD_FROM
 
-RUN curl -J -L -o /tmp/bashio.tar.gz \
+RUN apk add --no-cache \
+        curl=8.20.0-r0 \
+        jq=1.8.1-r0 \
+    && curl -J -L -o /tmp/bashio.tar.gz \
         "https://github.com/hassio-addons/bashio/archive/v0.7.1.tar.gz" \
     && mkdir /tmp/bashio \
     && tar zxvf \
